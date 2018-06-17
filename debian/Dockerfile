@@ -3,7 +3,7 @@
 ARG gover=1.10
 
 FROM debian:latest
-FROM golang:$gover
+# FROM golang:$gover
 
 ARG user=omakoto
 ARG group=user
@@ -11,7 +11,7 @@ ARG home=/home/$user
 ARG shell=/bin/bash
 
 RUN apt-get update
-RUN apt-get install -y git-core zsh vim less psmisc sudo procps libpcre++-dev
+RUN apt-get install -y git-core zsh vim less psmisc sudo procps
 
 WORKDIR $home
 ENV HOME=$home
