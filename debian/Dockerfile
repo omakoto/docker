@@ -11,7 +11,7 @@ ARG home=/home/$user
 ARG shell=/bin/bash
 
 RUN apt-get update
-RUN apt-get install -y git-core zsh vim less psmisc sudo procps
+RUN apt-get install -y git-core zsh vim less psmisc sudo procps curl wget openssh-server coreutils
 
 WORKDIR $home
 ENV HOME=$home
