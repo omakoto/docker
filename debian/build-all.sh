@@ -12,4 +12,4 @@ eval "$(bashgetopt '
 f              no_cache=--no-cache      # Don'\''t use cache
 ' "$@")"
 
-ee docker build $no_cache -t debian-latest .
+ee sudo docker build $no_cache -t debian-latest .

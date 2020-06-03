@@ -23,15 +23,16 @@ ENV HOME=$home
 RUN groupadd -g 1000 $group && \
     useradd -r -u 1000 -g $group -G sudo -s $shell $user
 
+# Change the sudo password to "docker"
 RUN echo "$user:docker" | chpasswd
 
 RUN chown $user:$group $home
 
 USER $user
 
-ENV GOPATH=$home/go/
-RUN mkdir $GOPATH
-ENV PATH=$GOPATH/bin:$PATH
+# ENV GOPATH=$home/go/
+# RUN mkdir $GOPATH
+# ENV PATH=$GOPATH/bin:$PATH
 
 ENV SHELL=$shell
 
