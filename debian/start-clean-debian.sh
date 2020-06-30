@@ -5,4 +5,4 @@ set -e
 
 cd "${0%/*}"
 
-exec sudo docker run -it --rm ${1:-debian-latest} /bin/bash -l
+exec docker run -it --rm ${1:-debian-latest} /bin/bash -l
